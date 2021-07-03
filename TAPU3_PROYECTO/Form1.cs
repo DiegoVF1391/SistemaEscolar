@@ -14,7 +14,21 @@ namespace TAPU3_PROYECTO
     {
         public Form1()
         {
-            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            new Registro().Show(); //Se abre la ventana de registro
         }
     }
 }

@@ -19,7 +19,7 @@ namespace TAPU3_PROYECTO
 
         private void Menu_Load(object sender, EventArgs e)
         {
-
+            //Carga en el formulario
         }
     }
 }
