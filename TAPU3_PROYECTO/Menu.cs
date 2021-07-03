@@ -10,21 +10,15 @@ using System.Windows.Forms;
 
 namespace TAPU3_PROYECTO
 {
-    public partial class Registro : Form
+    public partial class Menu : Form
     {
-        public Registro()
+        public Menu()
         {
             InitializeComponent();
         }
 
-        private void Registro_Load(object sender, EventArgs e)
+        private void Menu_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            this.Dispose();//Se cierra la ventana de registro
 
         }
     }
