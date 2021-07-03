@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAPU3_PROYECTO", "TAPU3_PROYECTO\TAPU3_PROYECTO.csproj", "{8F71AB3E-3F56-43ED-89B7-0226BE296685}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F71AB3E-3F56-43ED-89B7-0226BE296685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F71AB3E-3F56-43ED-89B7-0226BE296685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F71AB3E-3F56-43ED-89B7-0226BE296685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F71AB3E-3F56-43ED-89B7-0226BE296685}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03C770BF-C660-4AA2-83AF-03A9BCED7E7A}
+	EndGlobalSection
+EndGlobal
