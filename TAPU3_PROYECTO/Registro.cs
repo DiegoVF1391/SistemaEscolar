@@ -25,6 +25,7 @@ namespace TAPU3_PROYECTO
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             this.Dispose();//Se cierra la ventana de registro
+            //Comentario en rama modificaciones 
         }
     }
 }
