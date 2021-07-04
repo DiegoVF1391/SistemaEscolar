@@ -16,5 +16,10 @@ namespace TAPU3_PROYECTO
         {
             InitializeComponent();
         }
+
+        private void Registro_Load(object sender, EventArgs e)
+        {
+            //Commit prueba
+        }
     }
 }
