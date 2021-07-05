@@ -15,7 +15,7 @@ namespace TAPU3_PROYECTO
     public partial class Form1 : Form
     {
         private String Diego = "http://192.168.1.70/my_sge/verTodos.php";
-        private String Marco = "http://192.168.1.10/my_sge/verTodos.php";
+        private String Marco = "http://192.168.1.10/my_sge/acceso.php";
         //private String myWs = "Diego";
         private String apiClima = "https://api.openweathermap.org/data/2.5/weather?q=Morelia&lang=es&units=metric&appid=d7830285419c508e732ba5357594d148";
         private String usr;
@@ -38,7 +38,7 @@ namespace TAPU3_PROYECTO
 
             HttpClient client = new HttpClient();
             //mandando parametros para accesar a la bd con ws
-            String content = await client.GetStringAsync(Marco/*+"/?usr="+usr+"&pass="+pass*/);
+            String content = await client.GetStringAsync(Marco+"/?usr="+usr+"&pass="+pass);
 
             Console.WriteLine(content);
 
