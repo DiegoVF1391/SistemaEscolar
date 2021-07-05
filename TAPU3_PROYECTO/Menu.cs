@@ -33,10 +33,7 @@ namespace TAPU3_PROYECTO
             new Reticula().Show(); //Se abre el formulario de reticula
         }
 
-        private void btnDatos_Click(object sender, EventArgs e)
-        {
-            new Datos().Show(); //Se abre el formulario de datos
-        }
+     
 
         private void btnHorario_Click(object sender, EventArgs e)
         {
