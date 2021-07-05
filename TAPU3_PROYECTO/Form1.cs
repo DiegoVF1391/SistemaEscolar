@@ -40,13 +40,14 @@ namespace TAPU3_PROYECTO
 
             try
             {
+                //pasar datos del alumno al otro formulario y abrirlo... formulario "inicio "
                 JObject jsonObject = JObject.Parse(content);
                 JArray jOutput = (JArray)jsonObject.GetValue("output");
 
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error "+e);
+                Console.WriteLine("Error "+ex);
 
                 throw;
             }
