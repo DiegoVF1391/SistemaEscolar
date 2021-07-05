@@ -30,12 +30,12 @@ namespace TAPU3_PROYECTO
         private void InitializeComponent()
         {
             this.textNoControl = new System.Windows.Forms.TextBox();
-            this.textPass = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.textPass = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textNoControl
@@ -44,14 +44,6 @@ namespace TAPU3_PROYECTO
             this.textNoControl.Name = "textNoControl";
             this.textNoControl.Size = new System.Drawing.Size(264, 22);
             this.textNoControl.TabIndex = 0;
-            // 
-            // textPass
-            // 
-            this.textPass.Location = new System.Drawing.Point(77, 223);
-            this.textPass.Name = "textPass";
-            this.textPass.PasswordChar = '*';
-            this.textPass.Size = new System.Drawing.Size(264, 22);
-            this.textPass.TabIndex = 1;
             // 
             // btnIngresar
             // 
@@ -112,18 +104,26 @@ namespace TAPU3_PROYECTO
             this.label3.TabIndex = 6;
             this.label3.Text = "Instituto Tecnológico de Morelia";
             // 
+            // textPass
+            // 
+            this.textPass.Location = new System.Drawing.Point(81, 219);
+            this.textPass.Name = "textPass";
+            this.textPass.PasswordChar = '*';
+            this.textPass.Size = new System.Drawing.Size(264, 22);
+            this.textPass.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(426, 460);
+            this.Controls.Add(this.textPass);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.textPass);
             this.Controls.Add(this.textNoControl);
             this.Name = "Form1";
             this.Text = "Login";
@@ -136,12 +136,12 @@ namespace TAPU3_PROYECTO
         #endregion
 
         private System.Windows.Forms.TextBox textNoControl;
-        private System.Windows.Forms.TextBox textPass;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textPass;
     }
 }
 
