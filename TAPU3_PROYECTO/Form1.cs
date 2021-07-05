@@ -14,8 +14,9 @@ namespace TAPU3_PROYECTO
 {
     public partial class Form1 : Form
     {
-
-        private String myWs = "http://192.168.0.10:80/WS2021/ws2021/vercatalogo.php";
+        //Diego http://192.168.1.70:80/my_sge/acceso.php
+        //Marco http://192.168.0.10:443/WS2021/my_sge/acceso.php
+        private String myWs = "http://192.168.1.70:80/my_sge/acceso.php";
         private String apiClima = "https://api.openweathermap.org/data/2.5/weather?q=Morelia&lang=es&units=metric&appid=d7830285419c508e732ba5357594d148";
         private String usr;
         private String pass;
