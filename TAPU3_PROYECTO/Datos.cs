@@ -38,6 +38,9 @@ namespace TAPU3_PROYECTO
                     //mandando parametros para registrar en la bd, cambiar nombre del integrante segun se requiera
                     String newPass = await contra.GetStringAsync(DiegoP + "?pass=" + newPassword + "&id=" + indexx);
                     Console.WriteLine(newPass);
+
+                    MessageBox.Show("Se registró su contraseña");
+                    this.Dispose();
                 }
                 catch (Exception ex)
                 {
