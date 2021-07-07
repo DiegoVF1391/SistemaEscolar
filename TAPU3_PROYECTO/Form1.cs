@@ -12,8 +12,10 @@ using System.Windows.Forms;
 
 namespace TAPU3_PROYECTO
 {
+  
     public partial class Form1 : Form
     {
+        static int index;
         private String Diego = "http://192.168.1.70/my_sge/verTodos.php";
         private String Marco = "http://192.168.1.10/my_sge/acceso.php";
         //private String myWs = "Diego";
@@ -42,17 +44,25 @@ namespace TAPU3_PROYECTO
 
             Console.WriteLine(content);
 
-            /*try
+            try
             {
                 //pasar datos del alumno al otro formulario y abrirlo... formulario "inicio "
                 JObject jsonObject = JObject.Parse(content);
                 JArray jOutput = (JArray)jsonObject.GetValue("output");
+                Console.WriteLine(jOutput.ToString());
+                JObject jIndex = (JObject)jOutput[0];
+
+                index = (int)jIndex.GetValue("id");
+                MessageBox.Show("indice elegido: "+index);
+                // utilizar este indice para entrar a los datos del alumno elegido....
+                new Menu().Show();
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error "+ex);
-            }*/
+                MessageBox.Show("Error en la lectura");
+            }
 
           
 
