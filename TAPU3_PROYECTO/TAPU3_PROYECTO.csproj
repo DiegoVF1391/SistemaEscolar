@@ -73,12 +73,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormApi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormApi.Designer.cs">
-      <DependentUpon>FormApi.cs</DependentUpon>
-    </Compile>
     <Compile Include="Horario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,9 +110,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormApi.resx">
-      <DependentUpon>FormApi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Horario.resx">
       <DependentUpon>Horario.cs</DependentUpon>
