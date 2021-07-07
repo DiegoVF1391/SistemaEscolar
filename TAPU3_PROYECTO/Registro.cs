@@ -16,6 +16,9 @@ namespace TAPU3_PROYECTO
         private String Diego = "http://192.168.1.70/my_sge/registro.php";
         private String Marco = "http://192.168.1.10/my_sge/registro.php";
 
+        private String Diegoa = "http://192.168.1.70/my_sge/asignar.php";
+        private String Marcoa = "http://192.168.1.10/my_sge/asignar.php";
+
         private String n_control;
         private String nombre;
         private int semestre;
@@ -50,17 +53,31 @@ namespace TAPU3_PROYECTO
                 {
                     HttpClient client = new HttpClient();
                     //mandando parametros para registrar en la bd, cambiar nombre del integrante segun se requiera
-                    String content = await client.GetStringAsync(Diego
+                    String content = await client.GetStringAsync(Marco
                         + "?ncontrol=" + n_control + "&pass=" + pass + "&name=" + nombre + "&sem=" + semestre);
-
                     Console.WriteLine(content);
-                    MessageBox.Show("Registro exitoso!");
-
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al registrar, intente mas tarde...");
                     Console.WriteLine("Error: " + ex);
+                    throw;
+                }
+
+                try
+                {
+                    //asignar materias del semestre correspondiente 
+                    HttpClient client2 = new HttpClient();
+                    String content2 = await client2.GetStringAsync(Marcoa
+                        + "?usr="+n_control+"&sem="+semestre);
+
+                    Console.WriteLine(content2);
+                    MessageBox.Show("Asignacion exitosa!");
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al asginar materias");
                     throw;
                 }
 
