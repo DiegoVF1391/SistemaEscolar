@@ -38,28 +38,35 @@ namespace TAPU3_PROYECTO
             pass = textPass.Text.ToString();
             semestre = (int)selectSemester.Value;
 
-            try
+            //Se valida que los campos esten llenos
+            if (textNoControl.Text == "" || textNombre.Text == ""
+                || textPass.Text == "" || selectSemester.Value == 0)
             {
-                HttpClient client = new HttpClient();
-                //mandando parametros para registrar en la bd, cambiar nombre del integrante segun se requiera
-                String content = await client.GetStringAsync(Marco
-                    + "?ncontrol=" + n_control + "&pass=" + pass + "&name=" + nombre + "&sem=" + semestre);
-
-                Console.WriteLine(content);
-                MessageBox.Show("Registro exitoso!");
-
+                MessageBox.Show("Ingrese los datos que se le pide");
             }
-            catch (Exception ex )
+            else
             {
-                MessageBox.Show("Error al registrar, intente mas tarde...");
-                Console.WriteLine("Error: " +ex);
-                throw;
-            }
+                try
+                {
+                    HttpClient client = new HttpClient();
+                    //mandando parametros para registrar en la bd, cambiar nombre del integrante segun se requiera
+                    String content = await client.GetStringAsync(Diego
+                        + "?ncontrol=" + n_control + "&pass=" + pass + "&name=" + nombre + "&sem=" + semestre);
 
-            //this.Dispose();//Se cierra la ventana de registro
+                    Console.WriteLine(content);
+                    MessageBox.Show("Registro exitoso!");
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al registrar, intente mas tarde...");
+                    Console.WriteLine("Error: " + ex);
+                    throw;
+                }
+
+                this.Dispose();//Se cierra la ventana de registro
+            }
             //Comentario en rama modificaciones 
         }
-
-      
     }
 }

@@ -39,36 +39,41 @@ namespace TAPU3_PROYECTO
             usr = textNoControl.Text.ToString();
             pass = textPass.Text.ToString();
 
-            HttpClient client = new HttpClient();
-            //mandando parametros para accesar a la bd con ws
-            String content = await client.GetStringAsync(Marco+"/?usr="+usr+"&pass="+pass);
-
-            Console.WriteLine(content);
-
-            try
+            if (textNoControl.Text == "" && textPass.Text == "")
             {
-                //pasar datos del alumno al otro formulario y abrirlo... formulario "inicio "
-                JObject jsonObject = JObject.Parse(content);
-                JArray jOutput = (JArray)jsonObject.GetValue("output");
-                Console.WriteLine(jOutput.ToString());
-                JObject jIndex = (JObject)jOutput[0];
-
-                index = (int)jIndex.GetValue("id");
-                passi = (string)jIndex.GetValue("contrasenia");
-                MessageBox.Show("indice elegido: "+index);
-                // utilizar este indice para entrar a los datos del alumno elegido....
-                new Menu().Show();
-
+                MessageBox.Show("Ingrese los datos correspondientes");
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine("Error "+ex);
-                MessageBox.Show("Error en la lectura");
+                HttpClient client = new HttpClient();
+                //mandando parametros para accesar a la bd con ws
+                String content = await client.GetStringAsync(Diego + "/?usr=" + usr + "&pass=" + pass);
+
+                Console.WriteLine(content);
+
+                try
+                {
+                    //pasar datos del alumno al otro formulario y abrirlo... formulario "inicio "
+                    JObject jsonObject = JObject.Parse(content);
+                    JArray jOutput = (JArray)jsonObject.GetValue("output");
+                    Console.WriteLine(jOutput.ToString());
+                    JObject jIndex = (JObject)jOutput[0];
+
+                    
+
+                    index = (int)jIndex.GetValue("id");
+                    passi = (string)jIndex.GetValue("contrasenia");
+                    MessageBox.Show("indice elegido: " + index);
+                    // utilizar este indice para entrar a los datos del alumno elegido....
+                    new Menu().Show();
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error " + ex);
+                    MessageBox.Show("Error en la lectura.No se encuentra el usuario y/o contraseña");
+                }
             }
-
-          
-
-       
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
