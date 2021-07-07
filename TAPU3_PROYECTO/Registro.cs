@@ -53,7 +53,7 @@ namespace TAPU3_PROYECTO
                 {
                     HttpClient client = new HttpClient();
                     //mandando parametros para registrar en la bd, cambiar nombre del integrante segun se requiera
-                    String content = await client.GetStringAsync(Marco
+                    String content = await client.GetStringAsync(Diego
                         + "?ncontrol=" + n_control + "&pass=" + pass + "&name=" + nombre + "&sem=" + semestre);
                     Console.WriteLine(content);
                 }
@@ -68,7 +68,7 @@ namespace TAPU3_PROYECTO
                 {
                     //asignar materias del semestre correspondiente 
                     HttpClient client2 = new HttpClient();
-                    String content2 = await client2.GetStringAsync(Marcoa
+                    String content2 = await client2.GetStringAsync(Diegoa
                         + "?usr="+n_control+"&sem="+semestre);
 
                     Console.WriteLine(content2);

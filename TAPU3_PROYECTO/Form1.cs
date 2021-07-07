@@ -47,7 +47,7 @@ namespace TAPU3_PROYECTO
             {
                 HttpClient client = new HttpClient();
                 //mandando parametros para accesar a la bd con ws
-                String content = await client.GetStringAsync(Marco + "/?usr=" + usr + "&pass=" + pass);
+                String content = await client.GetStringAsync(Diego + "/?usr=" + usr + "&pass=" + pass);
 
                 Console.WriteLine(content);
 

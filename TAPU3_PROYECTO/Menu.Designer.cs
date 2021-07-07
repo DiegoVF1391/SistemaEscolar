@@ -110,7 +110,7 @@ namespace TAPU3_PROYECTO
             this.btnDatos.TabIndex = 15;
             this.btnDatos.Text = "Datos personales";
             this.btnDatos.UseVisualStyleBackColor = false;
-         
+            this.btnDatos.Click += new System.EventHandler(this.btnDatos_Click);
             // 
             // btnHorario
             // 

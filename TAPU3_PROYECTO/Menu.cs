@@ -24,7 +24,6 @@ namespace TAPU3_PROYECTO
         public Menu()
         {
             InitializeComponent();
-
         }
 
         private async void Menu_Load(object sender, EventArgs e)
@@ -32,7 +31,7 @@ namespace TAPU3_PROYECTO
             //Carga en el formulario
 
             HttpClient client = new HttpClient();
-            String content = await client.GetStringAsync(Marco + "/?id="+indexx);
+            String content = await client.GetStringAsync(Diego + "/?id="+indexx);
 
             try
             {
@@ -71,7 +70,12 @@ namespace TAPU3_PROYECTO
 
         private void btnExamen_Click(object sender, EventArgs e)
         {
-            //Se abre el formulario de examenes
+            new Examenes().Show();//Se abre el formulario de examenes
+        }
+
+        private void btnDatos_Click(object sender, EventArgs e)
+        {
+            new Datos().Show();
         }
     }
 }

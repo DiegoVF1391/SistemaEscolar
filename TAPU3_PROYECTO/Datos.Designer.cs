@@ -30,15 +30,11 @@ namespace TAPU3_PROYECTO
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnCambiar = new System.Windows.Forms.Button();
-            this.textTel = new System.Windows.Forms.TextBox();
             this.textNueva = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textSemestre = new System.Windows.Forms.TextBox();
-            this.textCarrera = new System.Windows.Forms.TextBox();
             this.textNoControl = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,59 +45,37 @@ namespace TAPU3_PROYECTO
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnCambiar);
-            this.groupBox1.Controls.Add(this.textTel);
             this.groupBox1.Controls.Add(this.textNueva);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox1.Location = new System.Drawing.Point(86, 330);
+            this.groupBox1.Location = new System.Drawing.Point(86, 280);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(504, 313);
+            this.groupBox1.Size = new System.Drawing.Size(504, 179);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Modificables:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(20, 43);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 24);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Telefono:";
             // 
             // btnCambiar
             // 
             this.btnCambiar.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnCambiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambiar.ForeColor = System.Drawing.Color.White;
-            this.btnCambiar.Location = new System.Drawing.Point(200, 165);
+            this.btnCambiar.Location = new System.Drawing.Point(206, 106);
             this.btnCambiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCambiar.Name = "btnCambiar";
             this.btnCambiar.Size = new System.Drawing.Size(292, 33);
             this.btnCambiar.TabIndex = 19;
             this.btnCambiar.Text = "Modificar datos";
             this.btnCambiar.UseVisualStyleBackColor = false;
-            // 
-            // textTel
-            // 
-            this.textTel.AllowDrop = true;
-            this.textTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textTel.Location = new System.Drawing.Point(151, 43);
-            this.textTel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textTel.Name = "textTel";
-            this.textTel.Size = new System.Drawing.Size(340, 27);
-            this.textTel.TabIndex = 13;
+            this.btnCambiar.Click += new System.EventHandler(this.btnCambiar_ClickAsync);
             // 
             // textNueva
             // 
             this.textNueva.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNueva.Location = new System.Drawing.Point(151, 105);
+            this.textNueva.Location = new System.Drawing.Point(157, 46);
             this.textNueva.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textNueva.Name = "textNueva";
             this.textNueva.Size = new System.Drawing.Size(340, 27);
@@ -111,8 +85,8 @@ namespace TAPU3_PROYECTO
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(11, 105);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(17, 46);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(111, 24);
             this.label7.TabIndex = 15;
@@ -122,23 +96,12 @@ namespace TAPU3_PROYECTO
             // 
             this.textSemestre.Enabled = false;
             this.textSemestre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSemestre.Location = new System.Drawing.Point(224, 258);
+            this.textSemestre.Location = new System.Drawing.Point(224, 208);
             this.textSemestre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textSemestre.Name = "textSemestre";
             this.textSemestre.ReadOnly = true;
             this.textSemestre.Size = new System.Drawing.Size(340, 27);
             this.textSemestre.TabIndex = 28;
-            // 
-            // textCarrera
-            // 
-            this.textCarrera.Enabled = false;
-            this.textCarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textCarrera.Location = new System.Drawing.Point(224, 201);
-            this.textCarrera.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textCarrera.Name = "textCarrera";
-            this.textCarrera.ReadOnly = true;
-            this.textCarrera.Size = new System.Drawing.Size(340, 27);
-            this.textCarrera.TabIndex = 27;
             // 
             // textNoControl
             // 
@@ -151,23 +114,12 @@ namespace TAPU3_PROYECTO
             this.textNoControl.Size = new System.Drawing.Size(340, 27);
             this.textNoControl.TabIndex = 26;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(82, 201);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 24);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Carrera:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(81, 258);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(81, 208);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 24);
             this.label3.TabIndex = 24;
@@ -177,7 +129,7 @@ namespace TAPU3_PROYECTO
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(81, 145);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 24);
@@ -188,7 +140,7 @@ namespace TAPU3_PROYECTO
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(82, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 24);
@@ -222,19 +174,18 @@ namespace TAPU3_PROYECTO
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.ClientSize = new System.Drawing.Size(688, 686);
+            this.ClientSize = new System.Drawing.Size(688, 548);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textSemestre);
-            this.Controls.Add(this.textCarrera);
             this.Controls.Add(this.textNoControl);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textNombre);
             this.Name = "Datos";
             this.Text = "Datos";
+            this.Load += new System.EventHandler(this.Datos_LoadAsync);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -245,15 +196,11 @@ namespace TAPU3_PROYECTO
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCambiar;
-        private System.Windows.Forms.TextBox textTel;
         private System.Windows.Forms.TextBox textNueva;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textSemestre;
-        private System.Windows.Forms.TextBox textCarrera;
         private System.Windows.Forms.TextBox textNoControl;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
