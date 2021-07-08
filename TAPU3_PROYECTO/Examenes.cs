@@ -65,6 +65,7 @@ namespace TAPU3_PROYECTO
 
                 if (jIndex.ContainsKey("pregunta"))
                 {
+                    //obtener id_materia para calificar
                     id_materia = (int)jIndex.GetValue("id_materia");
                     MessageBox.Show("id_materia = "+id_materia);
                     comboBox1.Items.Clear();
