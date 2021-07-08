@@ -12,26 +12,34 @@ using System.Windows.Forms;
 
 namespace TAPU3_PROYECTO
 {
-    public partial class Menu : Form
+    public partial class FormMenu : Form
     {
         //id del alumno elegido 
         int indexx = Form1.index;
+        public static int semestre;
+        public static String materiaExamen = "";
         private String nombre1;
 
-        private String Diego = "http://192.168.1.70/my_sge/infoE.php";
-        private String Marco = "http://192.168.1.10/my_sge/infoE.php";
+        private static String Diego = "http://192.168.1.70/my_sge/infoE.php";
+        private static String Marco = "http://192.168.1.10/my_sge/infoE.php";
 
-        public Menu()
+        private static String DiegoP = "http://192.168.1.70/my_sge/verCalif.php";
+        private static String MarcoP = "http://192.168.1.10/my_sge/verCalif.php";
+
+        //cambiar valor segun el usuario 
+        String ws = Diego;
+        String wsP = DiegoP;
+
+        public FormMenu()
         {
             InitializeComponent();
         }
 
         private async void Menu_Load(object sender, EventArgs e)
         {
-            //Carga en el formulario
-
+            //Carga en el formulario información del alumno
             HttpClient client = new HttpClient();
-            String content = await client.GetStringAsync(Marco + "/?id="+indexx);
+            String content = await client.GetStringAsync(ws + "/?id="+indexx);
 
             try
             {
@@ -41,6 +49,9 @@ namespace TAPU3_PROYECTO
                 JObject jIndex = (JObject)jOutput[0];
 
                 nombre1 = (String)jIndex.GetValue("nombre");
+                semestre = (int)jIndex.GetValue("semestre");
+                Console.WriteLine(semestre);
+
                 labelNombre.Text +=": "+nombre1;
 
             }
@@ -48,6 +59,32 @@ namespace TAPU3_PROYECTO
             {
                 Console.WriteLine("Error " + ex);
                 MessageBox.Show("Error en la lectura");
+            }
+
+
+            //Se cargan las materias para los examenes
+            HttpClient ma = new HttpClient();
+            String materia = await ma.GetStringAsync(wsP + "?usr=" + Form1.index);
+            Console.WriteLine(materia);
+
+            //nombre_materia y calificacion 
+            try
+            {
+                JObject jsonObject = JObject.Parse(materia);
+                JArray jOutput = (JArray)jsonObject.GetValue("output");
+
+                for (int i = 0; i < jOutput.Count; i++)
+                {
+                    JObject jmateria = (JObject)jOutput[i];
+                    comboBox1.Items.Add(jmateria.GetValue("nombre_materia").ToString());
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(e);
+                MessageBox.Show("Error al consultar");
+                throw;
             }
         }
 
@@ -70,7 +107,15 @@ namespace TAPU3_PROYECTO
 
         private void btnExamen_Click(object sender, EventArgs e)
         {
-            new Examenes().Show();//Se abre el formulario de examenes
+            if (!comboBox1.SelectedIndex.ToString().Equals("-1"))
+            {
+                materiaExamen = comboBox1.SelectedItem.ToString();
+                new Examenes().Show();//Se abre el formulario de examenes
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una materia para hacer el examen");
+            }
         }
 
         private void btnDatos_Click(object sender, EventArgs e)

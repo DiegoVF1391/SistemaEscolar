@@ -1,7 +1,7 @@
 ﻿
 namespace TAPU3_PROYECTO
 {
-    partial class Menu
+    partial class FormMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -36,6 +36,7 @@ namespace TAPU3_PROYECTO
             this.btnExamen = new System.Windows.Forms.Button();
             this.btnDatos = new System.Windows.Forms.Button();
             this.btnHorario = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnCali
@@ -125,12 +126,21 @@ namespace TAPU3_PROYECTO
             this.btnHorario.UseVisualStyleBackColor = false;
             this.btnHorario.Click += new System.EventHandler(this.btnHorario_Click);
             // 
-            // Menu
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(109, 478);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(394, 24);
+            this.comboBox1.TabIndex = 18;
+            // 
+            // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(608, 543);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnHorario);
             this.Controls.Add(this.btnExamen);
             this.Controls.Add(this.btnDatos);
@@ -138,7 +148,7 @@ namespace TAPU3_PROYECTO
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCali);
-            this.Name = "Menu";
+            this.Name = "FormMenu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.ResumeLayout(false);
@@ -155,5 +165,6 @@ namespace TAPU3_PROYECTO
         private System.Windows.Forms.Button btnExamen;
         private System.Windows.Forms.Button btnDatos;
         private System.Windows.Forms.Button btnHorario;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
