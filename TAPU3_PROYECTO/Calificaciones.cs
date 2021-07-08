@@ -37,7 +37,8 @@ namespace TAPU3_PROYECTO
 
         private async void Calificaciones_Load(object sender, EventArgs e)
         {
-            
+            labelCalificaciones.Text += Form1.nombre;
+            labelSemestre.Text += Form1.semestre;
 
             HttpClient client = new HttpClient();
             String califs = await client.GetStringAsync(ws + "?usr=" + Form1.index);

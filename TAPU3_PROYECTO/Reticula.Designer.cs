@@ -54,11 +54,10 @@ namespace TAPU3_PROYECTO
             this.Asignatura5,
             this.Asignatura6});
             this.tablaR.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tablaR.Location = new System.Drawing.Point(72, 112);
-            this.tablaR.Margin = new System.Windows.Forms.Padding(4);
+            this.tablaR.Location = new System.Drawing.Point(54, 91);
             this.tablaR.Name = "tablaR";
             this.tablaR.RowHeadersWidth = 51;
-            this.tablaR.Size = new System.Drawing.Size(1243, 591);
+            this.tablaR.Size = new System.Drawing.Size(932, 480);
             this.tablaR.TabIndex = 2;
             // 
             // Semestre
@@ -67,7 +66,7 @@ namespace TAPU3_PROYECTO
             this.Semestre.HeaderText = "Semestre ";
             this.Semestre.MinimumWidth = 6;
             this.Semestre.Name = "Semestre";
-            this.Semestre.Width = 101;
+            this.Semestre.Width = 79;
             // 
             // Asignatura1
             // 
@@ -116,22 +115,25 @@ namespace TAPU3_PROYECTO
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(592, 38);
+            this.label3.Location = new System.Drawing.Point(444, 31);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 36);
+            this.label3.Size = new System.Drawing.Size(108, 29);
             this.label3.TabIndex = 14;
             this.label3.Text = "Reticula";
             // 
             // Reticula
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1380, 741);
+            this.ClientSize = new System.Drawing.Size(1035, 602);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tablaR);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Reticula";
             this.Text = "Reticula";
+            this.Load += new System.EventHandler(this.Reticula_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

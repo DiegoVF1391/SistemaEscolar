@@ -45,9 +45,9 @@ namespace TAPU3_PROYECTO
             this.labelSemestre.ForeColor = System.Drawing.Color.White;
             this.labelSemestre.Location = new System.Drawing.Point(176, 130);
             this.labelSemestre.Name = "labelSemestre";
-            this.labelSemestre.Size = new System.Drawing.Size(102, 18);
+            this.labelSemestre.Size = new System.Drawing.Size(80, 18);
             this.labelSemestre.TabIndex = 5;
-            this.labelSemestre.Text = "labelSemestre";
+            this.labelSemestre.Text = "Semestre: ";
             // 
             // labelCalificaciones
             // 
