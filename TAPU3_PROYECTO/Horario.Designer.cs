@@ -30,15 +30,14 @@ namespace TAPU3_PROYECTO
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.tablaR = new System.Windows.Forms.DataGridView();
+            this.tablaH = new System.Windows.Forms.DataGridView();
             this.Semestre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asignatura1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asignatura2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asignatura3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asignatura4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asignatura5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asignatura6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaH)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -46,93 +45,87 @@ namespace TAPU3_PROYECTO
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(617, 22);
+            this.label3.Location = new System.Drawing.Point(463, 18);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 36);
+            this.label3.Size = new System.Drawing.Size(100, 29);
             this.label3.TabIndex = 16;
             this.label3.Text = "Horario";
             // 
-            // tablaR
+            // tablaH
             // 
-            this.tablaR.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tablaR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaR.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tablaH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.tablaH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Semestre,
             this.Asignatura1,
             this.Asignatura2,
             this.Asignatura3,
             this.Asignatura4,
-            this.Asignatura5,
-            this.Asignatura6});
-            this.tablaR.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tablaR.Location = new System.Drawing.Point(97, 96);
-            this.tablaR.Margin = new System.Windows.Forms.Padding(4);
-            this.tablaR.Name = "tablaR";
-            this.tablaR.RowHeadersWidth = 51;
-            this.tablaR.Size = new System.Drawing.Size(1243, 591);
-            this.tablaR.TabIndex = 15;
+            this.Asignatura5});
+            this.tablaH.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tablaH.Location = new System.Drawing.Point(69, 76);
+            this.tablaH.Name = "tablaH";
+            this.tablaH.RowHeadersWidth = 51;
+            this.tablaH.Size = new System.Drawing.Size(737, 480);
+            this.tablaH.TabIndex = 15;
             // 
             // Semestre
             // 
             this.Semestre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Semestre.HeaderText = "Semestre ";
+            this.Semestre.HeaderText = "Hora";
             this.Semestre.MinimumWidth = 6;
             this.Semestre.Name = "Semestre";
-            this.Semestre.Width = 101;
+            this.Semestre.Width = 55;
             // 
             // Asignatura1
             // 
-            this.Asignatura1.HeaderText = "Asignatura1";
+            this.Asignatura1.HeaderText = "Lunes";
             this.Asignatura1.MinimumWidth = 6;
             this.Asignatura1.Name = "Asignatura1";
             this.Asignatura1.Width = 125;
             // 
             // Asignatura2
             // 
-            this.Asignatura2.HeaderText = "Asignatura2";
+            this.Asignatura2.HeaderText = "Martes";
             this.Asignatura2.MinimumWidth = 6;
             this.Asignatura2.Name = "Asignatura2";
             this.Asignatura2.Width = 125;
             // 
             // Asignatura3
             // 
-            this.Asignatura3.HeaderText = "Asignatura3";
+            this.Asignatura3.HeaderText = "Miercoles";
             this.Asignatura3.MinimumWidth = 6;
             this.Asignatura3.Name = "Asignatura3";
             this.Asignatura3.Width = 125;
             // 
             // Asignatura4
             // 
-            this.Asignatura4.HeaderText = "Asignatura4";
+            this.Asignatura4.HeaderText = "Jueves";
             this.Asignatura4.MinimumWidth = 6;
             this.Asignatura4.Name = "Asignatura4";
             this.Asignatura4.Width = 125;
             // 
             // Asignatura5
             // 
-            this.Asignatura5.HeaderText = "Asignatura5";
+            this.Asignatura5.HeaderText = "Viernes";
             this.Asignatura5.MinimumWidth = 6;
             this.Asignatura5.Name = "Asignatura5";
             this.Asignatura5.Width = 125;
             // 
-            // Asignatura6
-            // 
-            this.Asignatura6.HeaderText = "Asignatura6";
-            this.Asignatura6.MinimumWidth = 6;
-            this.Asignatura6.Name = "Asignatura6";
-            this.Asignatura6.Width = 125;
-            // 
             // Horario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1403, 727);
+            this.ClientSize = new System.Drawing.Size(1052, 591);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tablaR);
+            this.Controls.Add(this.tablaH);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Horario";
             this.Text = "Horario";
-            ((System.ComponentModel.ISupportInitialize)(this.tablaR)).EndInit();
+            this.Load += new System.EventHandler(this.Horario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tablaH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,13 +134,12 @@ namespace TAPU3_PROYECTO
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView tablaR;
+        private System.Windows.Forms.DataGridView tablaH;
         private System.Windows.Forms.DataGridViewTextBoxColumn Semestre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asignatura1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asignatura2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asignatura3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asignatura4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asignatura5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Asignatura6;
     }
 }

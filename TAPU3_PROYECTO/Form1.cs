@@ -16,6 +16,8 @@ namespace TAPU3_PROYECTO
     public partial class Form1 : Form
     {
         public static int index;
+        public static int semestre;
+
         public static String passi;
         private static String Diego = "http://192.168.1.70/my_sge/acceso.php";
         private static String Marco = "http://192.168.1.10/my_sge/acceso.php";
@@ -63,6 +65,7 @@ namespace TAPU3_PROYECTO
                     
 
                     index = (int)jIndex.GetValue("id");
+                    semestre = (int)jIndex.GetValue("semestre");
                     passi = (string)jIndex.GetValue("contrasenia");
                     MessageBox.Show("indice elegido: " + index);
                     // utilizar este indice para entrar a los datos del alumno elegido....
