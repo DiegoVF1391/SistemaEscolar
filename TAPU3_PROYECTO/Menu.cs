@@ -27,8 +27,8 @@ namespace TAPU3_PROYECTO
         private static String MarcoP = "http://192.168.1.10/my_sge/verCalif.php";
 
         //cambiar valor segun el usuario 
-        String ws = Diego;
-        String wsP = DiegoP;
+        String ws = Marco;
+        String wsP = MarcoP;
 
         public FormMenu()
         {

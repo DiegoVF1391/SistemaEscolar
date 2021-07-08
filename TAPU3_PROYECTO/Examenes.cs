@@ -18,18 +18,26 @@ namespace TAPU3_PROYECTO
         String materia = FormMenu.materiaExamen;
 
         //guardar semestre, respuesta y carrera
-        private String car, inciso, respuestaCorrecta;
-        private int cont = 0, numRespuestas = 0, idP=0;
+        private String car, inciso;
+        private int cont = 0, numRespuestas = 0, idP=0, cont2 = 0;
+        private bool respuestaCorrecta = false;
 
         private String materiaCalif;
 
         JObject jIndex;
         JArray jOutput;
 
+        JObject jIndex2;
+        JArray jOutput2;
+
         private static String Diego = "http://192.168.1.70/my_sge/preguntas.php";
         private static String Marco = "http://192.168.1.10/my_sge/preguntas.php";
 
-        String ws = Diego;
+        private static String Diegor = "http://192.168.1.70/my_sge/pyr.php";
+        private static String Marcor = "http://192.168.1.10/my_sge/pyr.php";
+
+        String ws = Marco;
+        String wsr = Marcor;
         public Examenes()
         {
             InitializeComponent();
@@ -54,6 +62,7 @@ namespace TAPU3_PROYECTO
                     comboBox1.Items.Clear();
                     label1.Text += (String)jIndex.GetValue("pregunta");
                     idP = (int)jIndex.GetValue("id");
+
                 }
                 //labelNombre.Text += ": " + nombre1;
 
@@ -63,6 +72,45 @@ namespace TAPU3_PROYECTO
                 Console.WriteLine("Error " + ex);
                 MessageBox.Show("Error en la lectura");
             }
+
+            //MessageBox.Show(idP.ToString());
+            //cargar respuestas 
+            HttpClient client2 = new HttpClient();
+            String respuestas = await client2.GetStringAsync(wsr + "?materia=" + materia
+                + "&semestre=" + semestre + "&idPregunta=" + idP);
+            try
+            {
+                JObject jsonObject2 = JObject.Parse(respuestas);
+                jOutput2 = (JArray)jsonObject2.GetValue("output");
+                Console.WriteLine(jOutput2.ToString());
+                jIndex2 = (JObject)jOutput2[cont2];
+
+                if (jIndex2.ContainsKey("respuesta"))
+                {
+                    //comboBox1.Items.Clear();
+
+                    MessageBox.Show(jIndex2.GetValue("correcta").ToString());
+                    //respuestaCorrecta = (bool)jIndex2.GetValue("correcta");
+
+                    if ((int)jIndex2.GetValue("id_pregunta") == idP) 
+                    {
+                        for (int i = 0; i < jOutput2.Count; i++)
+                        {
+                            JObject jRes = (JObject)jOutput2[i];
+                            comboBox1.Items.Add(jRes.GetValue("respuesta"));
+                        }
+                        
+                    }
+                }
+                //labelNombre.Text += ": " + nombre1;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error " + ex);
+                MessageBox.Show("Error en la lectura");
+            }
+
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
