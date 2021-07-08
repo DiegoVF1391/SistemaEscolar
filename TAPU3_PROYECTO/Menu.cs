@@ -31,7 +31,7 @@ namespace TAPU3_PROYECTO
             //Carga en el formulario
 
             HttpClient client = new HttpClient();
-            String content = await client.GetStringAsync(Diego + "/?id="+indexx);
+            String content = await client.GetStringAsync(Marco + "/?id="+indexx);
 
             try
             {

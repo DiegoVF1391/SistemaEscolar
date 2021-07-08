@@ -18,11 +18,15 @@ namespace TAPU3_PROYECTO
         String semestre;
         String nombre, n_control, contrasenia; 
 
-        private String Diego = "http://192.168.1.70/my_sge/infoE.php";
-        private String Marco = "http://192.168.1.10/my_sge/infoE.php";
+        private static String Diego = "http://192.168.1.70/my_sge/infoE.php";
+        private static String Marco = "http://192.168.1.10/my_sge/infoE.php";
 
-        private String DiegoP = "http://192.168.1.70/my_sge/newPass.php";
-        private String MarcoP = "http://192.168.1.10/my_sge/newPass.php";
+        private static String DiegoP = "http://192.168.1.70/my_sge/newPass.php";
+        private static String MarcoP = "http://192.168.1.10/my_sge/newPass.php";
+
+        //cambiar valor segun el usuario 
+        String ws = Marco;
+        String wsP = MarcoP;
 
         private async void btnCambiar_ClickAsync(object sender, EventArgs e)
         {
@@ -36,7 +40,7 @@ namespace TAPU3_PROYECTO
                 {
                     HttpClient contra = new HttpClient();
                     //mandando parametros para registrar en la bd, cambiar nombre del integrante segun se requiera
-                    String newPass = await contra.GetStringAsync(DiegoP + "?pass=" + newPassword + "&id=" + indexx);
+                    String newPass = await contra.GetStringAsync(wsP + "?pass=" + newPassword + "&id=" + indexx);
                     Console.WriteLine(newPass);
 
                     MessageBox.Show("Se registró su contraseña");
@@ -63,7 +67,7 @@ namespace TAPU3_PROYECTO
         {
             //Se realiza la ejecución del web service para consultar los datos del alumno
             HttpClient client = new HttpClient();
-            String content = await client.GetStringAsync(Diego + "?id=" + indexx);
+            String content = await client.GetStringAsync(ws + "?id=" + indexx);
 
             try
             {

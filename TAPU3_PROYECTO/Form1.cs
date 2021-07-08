@@ -17,9 +17,10 @@ namespace TAPU3_PROYECTO
     {
         public static int index;
         public static String passi;
-        private String Diego = "http://192.168.1.70/my_sge/acceso.php";
-        private String Marco = "http://192.168.1.10/my_sge/acceso.php";
-        //private String myWs = "Diego";
+        private static String Diego = "http://192.168.1.70/my_sge/acceso.php";
+        private static String Marco = "http://192.168.1.10/my_sge/acceso.php";
+
+        private String myWs = Marco;
         private String apiClima = "https://api.openweathermap.org/data/2.5/weather?q=Morelia&lang=es&units=metric&appid=d7830285419c508e732ba5357594d148";
         private String usr;
         private String pass;
@@ -47,7 +48,7 @@ namespace TAPU3_PROYECTO
             {
                 HttpClient client = new HttpClient();
                 //mandando parametros para accesar a la bd con ws
-                String content = await client.GetStringAsync(Diego + "/?usr=" + usr + "&pass=" + pass);
+                String content = await client.GetStringAsync(myWs + "/?usr=" + usr + "&pass=" + pass);
 
                 Console.WriteLine(content);
 

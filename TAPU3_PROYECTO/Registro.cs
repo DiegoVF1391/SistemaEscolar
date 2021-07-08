@@ -13,11 +13,15 @@ namespace TAPU3_PROYECTO
 {
     public partial class Registro : Form
     {
-        private String Diego = "http://192.168.1.70/my_sge/registro.php";
-        private String Marco = "http://192.168.1.10/my_sge/registro.php";
+        private static String Diego = "http://192.168.1.70/my_sge/registro.php";
+        private static String Marco = "http://192.168.1.10/my_sge/registro.php";
 
-        private String Diegoa = "http://192.168.1.70/my_sge/asignar.php";
-        private String Marcoa = "http://192.168.1.10/my_sge/asignar.php";
+        private static String Diegoa = "http://192.168.1.70/my_sge/asignar.php";
+        private static String Marcoa = "http://192.168.1.10/my_sge/asignar.php";
+
+        //cambiar valor segun el usuario 
+        String ws = Marco;
+        String wsA = Marcoa;
 
         private String n_control;
         private String nombre;
@@ -53,7 +57,7 @@ namespace TAPU3_PROYECTO
                 {
                     HttpClient client = new HttpClient();
                     //mandando parametros para registrar en la bd, cambiar nombre del integrante segun se requiera
-                    String content = await client.GetStringAsync(Diego
+                    String content = await client.GetStringAsync(ws
                         + "?ncontrol=" + n_control + "&pass=" + pass + "&name=" + nombre + "&sem=" + semestre);
                     Console.WriteLine(content);
                 }
@@ -68,7 +72,7 @@ namespace TAPU3_PROYECTO
                 {
                     //asignar materias del semestre correspondiente 
                     HttpClient client2 = new HttpClient();
-                    String content2 = await client2.GetStringAsync(Diegoa
+                    String content2 = await client2.GetStringAsync(wsA
                         + "?usr="+n_control+"&sem="+semestre);
 
                     Console.WriteLine(content2);
