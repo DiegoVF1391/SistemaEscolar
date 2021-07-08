@@ -19,7 +19,7 @@ namespace TAPU3_PROYECTO
 
         //guardar semestre, respuesta y carrera
         private String car, inciso, respuestaCorrecta;
-        private int cont = 0, numRespuestas = 0;
+        private int cont = 0, numRespuestas = 0, idP=0;
 
         private String materiaCalif;
 
@@ -52,7 +52,8 @@ namespace TAPU3_PROYECTO
                 if (jIndex.ContainsKey("pregunta"))
                 {
                     comboBox1.Items.Clear();
-                    label1.Text += (String)jIndex.GetValue("pregunta"); 
+                    label1.Text += (String)jIndex.GetValue("pregunta");
+                    idP = (int)jIndex.GetValue("id");
                 }
                 //labelNombre.Text += ": " + nombre1;
 
@@ -93,10 +94,11 @@ namespace TAPU3_PROYECTO
                 jIndex = (JObject)jOutput[cont];
                 if (jIndex.ContainsKey("pregunta"))
                 {
-
                     comboBox1.Items.Clear();
+
                     label1.Text = (cont+1) + ".-Pregunta ";
                     label1.Text += (String)jIndex.GetValue("pregunta");
+                    idP = (int)jIndex.GetValue("id");
                 }
             }
             else
